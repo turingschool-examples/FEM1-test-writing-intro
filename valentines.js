@@ -1,9 +1,26 @@
-function makeValentine(valentine) {
-  var sentiment = `Dear ${valentine.recipient},\n${valentine.poem[0]}\n${valentine.poem[1]}\n${valentine.poem[2]}\n${valentine.poem[3]}\nLove, ${valentine.admirer}`
+var valentines = [
+  {
+    recipient: "Amy",
+    poem: [
+      "Roses are red",
+      "Violets are blue",
+      "My code would be nothing",
+      "without your reviews"
+    ],
+    admirer: "Leta"
+  }
+]
 
-  return sentiment;
+function addValentine(person, poemArray, name) {
+  var newValentine = {
+    recipient: person,
+    poem: poemArray,
+    admirer: name || "your secret admirer"
+  }
+
+  valentines.push(newValentine);
 }
 
 module.exports = {
-  makeValentine
+  addValentine
 }
